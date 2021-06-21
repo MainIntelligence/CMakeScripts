@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cmake -S . -B Build && cd Build && make && ./$1
+exit $?

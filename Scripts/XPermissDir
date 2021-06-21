@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]
+  then echo "Modifying permissions requires running in sudo mode (put sudo before command)"
+  exit
+fi
+
+[[ "$#" -le 0 ]] && echo "$# Must specify a directory containing items installed in either bin or the directory relative to /usr/local/bin specified as second argument" && exit
+
+for FILE in $(ls ${1})
+do
+	[[ -f /usr/local/bin/$FILE ]] && chmod u+x /usr/local/bin/$FILE || echo "$FILE is not installed in usr/local/bin/$2"
+done
+echo "Successfully made all files in ${1} executable in the installation directory usr/local/bin/${2}
+

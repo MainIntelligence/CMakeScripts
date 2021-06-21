@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]
+  then echo "Installing to /usr/local requires running in sudo mode"
+  exit
+fi
+
+cmake -S . -B Build && cd Build && make && cmake --install . 
+
+exit $?
