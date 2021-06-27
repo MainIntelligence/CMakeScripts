@@ -8,7 +8,7 @@ fi
 
 for FILE in $(ls ${1})
 do
-	[[ -f /usr/local/bin/$FILE ]] && chmod u+x /usr/local/bin/$FILE || echo "$FILE is not installed in usr/local/bin/$2"
+	[[ -f /usr/local/bin/$FILE ]] && chmod +x /usr/local/bin/$FILE || echo "$FILE is not installed in usr/local/bin/$2"
 done
 echo "Successfully made all files in ${1} executable in the installation directory usr/local/bin/${2}
 
