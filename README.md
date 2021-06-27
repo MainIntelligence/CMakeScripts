@@ -12,7 +12,7 @@ linux scripts to automate common cmake tasks like installing, running, testing, 
 
 sudo Scripts/MakeInstall
 
-sudo chmod u+x /usr/local/bin/XPermissDir
+sudo chmod +x /usr/local/bin/XPermissDir
 
 sudo XPermissDir Scripts
 
@@ -22,6 +22,6 @@ These will:
 
 (1) build and install the scripts from this repo to your /usr/local/bin directory (allowing them to be run easily)
 
-(2) Allow XPermissDir in the install directory to be ran.
+(2) Allow XPermissDir in the install directory to be executed.
 
 (3) Run XPermissDir with Scripts as its argument, which gives execution permission to all of the installed scripts brought in from the Scripts directory.
