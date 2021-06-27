@@ -5,7 +5,7 @@ linux scripts to automate common cmake tasks like installing, running, testing, 
 1. Download the repo
 
 2. You can use the MakeInstall and XPermissDir scripts in the Scripts directory, or do the process there yourself,
-  if you want to use these, ensure you can execute with the command: "chmod u+x path" (give execute permission to file at path)
+  if you want to use these, ensure you can execute with the command: "chmod +x path" (give execute permission to file at path)
 
 <hr>
 3. Go to the repo directory with the top level CMakeLists.txt. Run the following sequence of commands:
