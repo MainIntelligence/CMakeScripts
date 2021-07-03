@@ -1,4 +1,6 @@
 #!/bin/bash
-
+[[ "$#" -le 0 ]] && echo "CMRun requires the path of an executable that make will create in Build directory.
 cmake -S . -B Build && cd Build && make && ./$1
+cd ..
+
 exit $?

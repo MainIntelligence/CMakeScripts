@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ "$EUID" -ne 0 ]
-  then echo "Modifying permissions requires running in sudo mode (put sudo before command)"
+  then echo "Modifying permissions requires running in sudo mode"
   exit
 fi
 
@@ -10,5 +10,6 @@ for FILE in $(ls ${1})
 do
 	[[ -f /usr/local/bin/$FILE ]] && chmod +x /usr/local/bin/$FILE || echo "$FILE is not installed in usr/local/bin/$2"
 done
-echo "Successfully made all files in ${1} executable in the installation directory usr/local/bin/${2}
+
+echo "Successfully made all files in ${1} executable in the installation directory usr/local/bin/${2}"
 
